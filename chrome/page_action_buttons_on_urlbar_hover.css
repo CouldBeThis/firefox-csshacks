@@ -18,6 +18,20 @@ See the above repository for updates as well as full license text. */
 		TODO: Move icons to the left? or beneath?  
 		TODO: Make icons disaeapear when editing text in URL bar.
 */  
+
+#page-action-buttons	{
+  	zbackground-color: gold;
+  	zborder: 2px solid blue;
+  margin: 0px;
+  padding: 0px;
+}
+
+#page-action-buttons .urlbar-page-action	{
+  	zbackground-color: gold;
+  	zborder: 2px solid blue;
+  margin: 0px;
+  padding: 0px;
+}
  
 /* Use `display` to hide all but the last item */
 #page-action-buttons .urlbar-page-action:not(:nth-last-child(1))	{
@@ -26,7 +40,6 @@ See the above repository for updates as well as full license text. */
   	zmargin: 6px;
   	zpadding: 6px;
 	display:	none;
-  width: 5px;
 }
 
 /* Troubleshooting
@@ -70,11 +83,31 @@ zmargin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding) );
 /* show the items on hover */
 #urlbar:hover .urlbar-page-action,
 .urlbar-page-action[open],
-.urlbar-page-action[open] ~ .urlbar-page-action{
+.urlbar-page-action[open] ~ .urlbar-page-action {
+  	zborder: 2px solid violet;
   zopacity: 1;
   display: inherit;
   margin-inline-end: 0px !important;
+  position: fixed;
+  right: 20px;
+  top: 300px;
 }
+
+#urlbar:hover .urlbar-page-action,
+.urlbar-page-action[open],
+.urlbar-page-action[open] ~ .urlbar-page-action {
+  	zborder: 2px dashed blueviolet;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
