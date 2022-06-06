@@ -1,15 +1,84 @@
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/page_action_buttons_on_urlbar_hover.css made available under Mozilla Public License v. 2.0
 See the above repository for updates as well as full license text. */
 
-.urlbar-page-action{
-  margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding) );
-  opacity: 0;
-  transition: margin-inline-end 100ms linear, opacity 200ms linear;
+/* 2022-06-60 - CBT: 
+	- Changed to use `display` instead of `opacity` to achive effect 
+	- Changed so that the Bookmark icon is always displayed. 
+		Or at least, the LAST icon is always displayed. 
+		Hoping that Mozilla will keep that consistent somehow but not sure. */
+
+/* This works to ONLY hide the bookmark icon. I want to NOT hide it and hide the others.
+.urlbar-page-action:nth-last-child(1)	{
+  	background-color: gold;
+  	border: 6px solid goldenrod;
+   zdisplay:	none;
+} */
+
+/* 	TODO: Further minimize whitespace between icons.
+		TODO: Move icons to the left? or beneath?  
+		TODO: Make icons disaeapear when editing text in URL bar.
+*/  
+ 
+/* Use `display` to hide all but the last item */
+#page-action-buttons .urlbar-page-action:not(:nth-last-child(1))	{
+  	zbackground-color: gold;
+  	zborder: 2px solid blue;
+  	zmargin: 6px;
+  	zpadding: 6px;
+	display:	none;
+  width: 5px;
 }
 
+/* Troubleshooting
+.urlbar-page-action {
+  	zbackground-color: firebrick !important;
+  	zoutline: 6px dotted brown;
+zmargin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding) ); 
+	margin: 0px !important;
+  padding: 0px !important; 
+  line-height: 0.8em !important;
+} */
+
+/*  I think this was original code; but no longer in use
+.urlbar-page-action	.urlbar-icon {
+  	zbackground-color: cadetblue !important;
+  	zoutline: 6px dotted brown;
+  zmargin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding) ); 
+	margin: 0px !important;
+  padding: 0px !important; 
+  line-height: 0.8em !important;
+  zopacity: 0;
+  ztransition: margin-inline-end 100ms linear, opacity 200ms linear;
+  zdisplay: none;
+}
+ */
+/* .urlbar-page-action image {
+  	background-color: blueviolet !important;
+} */
+
+/* .urlbar-page-action	#star-button {
+  	zbackground-color: violet !important;
+  display: -webkit-box  !important;
+}
+
+#star-button {
+  	zbackground-color: royalblue;
+  display: inherit !important;
+}
+ */
+
+/* show the items on hover */
 #urlbar:hover .urlbar-page-action,
 .urlbar-page-action[open],
 .urlbar-page-action[open] ~ .urlbar-page-action{
-  opacity: 1;
+  zopacity: 1;
+  display: inherit;
   margin-inline-end: 0px !important;
 }
+
+
+
+
+
+
+
