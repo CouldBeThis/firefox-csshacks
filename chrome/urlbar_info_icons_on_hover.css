@@ -3,18 +3,54 @@ See the above repository for updates as well as full license text. */
 
 /* Hides info icons (except remote control icon) on the left side of urlbar and shows them when urlbar is hovered. */
 
+/* everything commented out by way of troubleshooting */
+
+/* style at rest */
 #urlbar-search-button,
 #tracking-protection-icon-container,
 #identity-box,
 #identity-box.extensionPage #identity-icon-label{
+  	zbackground-color: aquamarine !important;
   max-width: 0px;
-  transition: max-width 100ms linear !important;
+/*   transition: max-width 100ms linear !important; */
   overflow: hidden;
+  margin: 0px !important;
+  padding: 0px !important;
+  line-height: 0.8em !important;
 }
 
-#identity-box.extensionPage{ max-width: 32px }
-
+/* style on mouse over */
+#identity-box.extensionPage { 
+  	zbackground-color: powderblue !important;
+    zoutline: 13px solid olivedrab !important;
+  max-width: 32px;
+}
+/* style on mouse over */
+/* edited to remove whitespace */
 #urlbar:hover #urlbar-input-container > box,
 #urlbar:hover #identity-box.extensionPage #identity-icon-label{
+  	zbackground-color: plum !important;
+    zoutline: 3px solid navy !important;
   max-width: 300px;
+  margin: 0px !important;
+  padding: 0px !important;
+  line-height: 0.8em !important;
+  
 }
+
+/* not sure why the FF menu needs to be included in this file? 
+Removed pending more info.*/
+#PanelUI-menu-button {
+  	background-color: lavender !important;
+    outline: 3px solid navy !important;
+  border: 1px solid transparent !important;
+}
+
+
+
+
+
+
+
+
+
