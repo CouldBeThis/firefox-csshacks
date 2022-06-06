@@ -3,7 +3,7 @@ See the above repository for updates as well as full license text. */
 
 /* Hides info icons (except remote control icon) on the left side of urlbar and shows them when urlbar is hovered. */
 
-/* everything commented out by way of troubleshooting */
+/* CBT: WORKING */
 
 /* style at rest */
 #urlbar-search-button,
