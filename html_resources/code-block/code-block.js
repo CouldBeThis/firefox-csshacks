@@ -21,7 +21,11 @@ class CodeBlock extends HTMLElement{
   }
   
   determineAndLoadContent(){
-    CodeBlock.getSource(this.src)
+    const src = this.src;
+    if(!src){
+      return
+    }
+    CodeBlock.getSource(src)
     .then(
       (data) => this.consumeData(data,CodeBlock.InsertMode.Replace),
       (e) => {
