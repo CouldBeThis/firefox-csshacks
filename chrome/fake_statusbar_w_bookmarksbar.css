@@ -27,6 +27,8 @@ edge, then add another flex-space after the first one */
 }
 
 #PersonalToolbar {
+  	background-color: teal !important;
+  	border: 4px solid teal;
 	position: fixed;
 	display: flex;
 	bottom: 0;
@@ -69,7 +71,10 @@ edge, then add another flex-space after the first one */
 	min-height: var(--uc-browser-base-padding) !important;
 }
 
-/* Using -moz-element() causes some problems after Firefox has been running several hours such as long tab switch times. For this reason the background image is removed on hover and focused states which appears to clear the state. */
+/* Using -moz-element() causes some problems after Firefox has been 
+running several hours such as long tab switch times. For this reason 
+the background image is removed on hover and focused states which 
+appears to clear the state. */
 #PersonalToolbar>toolbarspring:first-of-type:hover {
 	background-image: none
 }
@@ -84,7 +89,11 @@ edge, then add another flex-space after the first one */
 	margin-right: 0px !important;
 }
 
-/* If you use a theme where urlbar is partially transparent you should edit this color to something that closely matches the perceived color of urlbar. Or perhaps use background-image - linear-gradient() can work well here. But keep the color or image opaque or otherwise you'll face an issue where urlbar text bleeds through */
+/* If you use a theme where urlbar is partially transparent you should 
+edit this color to something that closely matches the perceived color 
+of urlbar. Or perhaps use background-image - linear-gradient() can work 
+well here. But keep the color or image opaque or otherwise you'll face 
+an issue where urlbar text bleeds through */
 #statuspanel-inner {
 	background-color: var(--toolbar-accent-color)
 }
@@ -122,5 +131,17 @@ edge, then add another flex-space after the first one */
 		border: 4px solid forestgreen !important;
 		background-color: wheat !important;
 	color: var(--toolbar-field-color, black) !important;
+  z-index: 	1000;
 }
- 
+
+#PersonalToolbar #find-button {
+		border: 4px solid darkred !important;
+		background-color: burlywood !important;
+/*   visibility: 	hidden */
+  position: revert-layer;
+  left: 60px;
+  bottom:70px;
+  
+}
+
+
