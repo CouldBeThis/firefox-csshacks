@@ -27,11 +27,12 @@ edge, then add another flex-space after the first one */
 }
 
 #PersonalToolbar {
-  	background-color: teal !important;
+/*   	background-color: teal !important; */
   	border: 4px solid teal;
 	position: fixed;
 	display: flex;
 	bottom: 0;
+  left: 0;
 	width: 100vw;
 }
 
@@ -43,6 +44,7 @@ edge, then add another flex-space after the first one */
 	padding: 0 var(--toolbarbutton-outer-padding) !important;
 }
 
+/* icons not otherwise styled */
 #PersonalToolbar>toolbarbutton>.toolbarbutton-icon,
 #PersonalToolbar>toolbarbutton>.toolbarbutton-badge-stack {
 	width: var(--uc-browser-base-padding, 0px) !important;
@@ -56,9 +58,15 @@ edge, then add another flex-space after the first one */
 	background-repeat: no-repeat;
 	background-image: -moz-element(#statuspanel);
 	max-width: 50vw !important;
-	/* Modify this to let the status bar grow larger than 50% of window width */
+	/* Modify this to let the status bar grow larger than 50% of 
+  window width */
 	min-width: 60ch;
 	flex-grow: 10;
+/* 	position: fixed; */
+/* 	display: flex;
+	bottom: 40;
+  right: 0;
+	width: 100vw; */
 }
 
 #personal-toolbar-empty {
@@ -95,18 +103,21 @@ of urlbar. Or perhaps use background-image - linear-gradient() can work
 well here. But keep the color or image opaque or otherwise you'll face 
 an issue where urlbar text bleeds through */
 #statuspanel-inner {
-	background-color: var(--toolbar-accent-color)
+	background-color: var(--toolbar-accent-color);
 }
 
 /*#statuspanel-inner{ background-color: var(--toolbar-non-lwt-bgcolor) }*/
 
 #statuspanel {
 		border: 4px solid violet !important;
-		background-color: thistle !important;
+/* 		background-color: thistle !important; */
 	color: lightpink;
-	z-index: -1;
+/* 	z-index: -1; */ /* removing this lets the status float above the other bookmarks bar content */
 	visibility: visible !important;
 	opacity: 1 !important;
+  height: 1.5em;
+  bottom:0px;
+  left:2em;
 }
 
 #statuspanel[inactive]>#statuspanel-inner>#statuspanel-label {
