@@ -26,8 +26,15 @@ edge, then add another flex-space after the first one */
 	--uc-browser-base-padding: calc(2 * var(--toolbarbutton-inner-padding) + 16px)
 }
 
+/* TODO: give status bar color */
+
 #PersonalToolbar {
 /*   	background-color: teal !important; */
+/* background: linear-gradient(180deg,
+    rgba(2,0,36,0.9,1) 0%,
+    rgba(214,214,222,0) 6%,
+    rgba(214,214,222,1) 100%); /* give the appearance of a line above the bar without shifting contents down */  */
+
   	border: 4px solid teal;
 	position: fixed;
 	display: flex;
@@ -124,8 +131,7 @@ an issue where urlbar text bleeds through */
 	opacity: 1 !important;
   height: 1.5em;
   bottom:0px;
-  zleft:50px; /* space for find button */
-}
+  zleft:50px; /* space for find button */}
 
 #statuspanel[inactive]>#statuspanel-inner>#statuspanel-label {
 	visibility: hidden
