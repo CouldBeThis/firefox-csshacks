@@ -103,7 +103,7 @@ appears to clear the state. */
 #statuspanel-inner>#statuspanel-label {
 	height: 3em;
 	min-width: 1000px;
-	background-color: transparent !important;
+	zbackground-color: transparent !important;
 	border: none !important;
 	font-size: inherit;
 	color: inherit !important;
