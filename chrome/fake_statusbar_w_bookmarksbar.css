@@ -29,7 +29,6 @@ edge, then add another flex-space after the first one */
 /* TODO: give status bar color */
 
 #PersonalToolbar {
-/*   	background-color: teal !important; */
 /* background: linear-gradient(180deg,
     rgba(2,0,36,0.9,1) 0%,
     rgba(214,214,222,0) 6%,
@@ -151,6 +150,7 @@ an issue where urlbar text bleeds through */
 		zborder: 4px solid tomato !important;
 /* 		background-color: gold !important; */
 	background-color: #fff;
+  	background-color: teal !important;
 	color: black; /* TODO: utilize color scheme */
 }
 
@@ -200,7 +200,7 @@ background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' \
 /* put the find bar into the status bar */
 findbar {
 		zborder: 4px solid darkred !important;
-		background-color: transparent !important;
+		zbackground-color: transparent !important; 
 	position: fixed;
 	display: flex;
 	bottom: 0;
